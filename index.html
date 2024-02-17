@@ -3,11 +3,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* Hide content initially */
+        #content {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <h1>Welcome to the club</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+    <script>
+        // Function to display content after a delay
+        function showContent() {
+            var content = document.getElementById('content');
+            content.style.display = 'block';
+        }
+
+        // Call the function after a delay (e.g., 1 second)
+        setTimeout(showContent, 1000);
+    </script>
+
+    <!-- Content to be displayed after a delay -->
+    <div id="content">
+        <!-- Your content goes here -->
+        <p>This content appears a second after the page is loaded.</p>
+    </div>
 </body>
 </html>
