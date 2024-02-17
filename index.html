@@ -6,7 +6,13 @@
     <style>
         /* Hide content initially */
         #content {
-            display: none;
+            opacity: 0;
+            transition: opacity 1s ease-in-out; /* Transition effect for opacity property */
+        }
+
+        /* Show content by changing opacity */
+        #content.show {
+            opacity: 1;
         }
     </style>
 </head>
@@ -16,21 +22,21 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
+    <!-- Content to be displayed after a delay -->
+    <div id="content">
+        <!-- Your content goes here -->
+        <p>This content fades in a second after the page is loaded.</p>
+    </div>
+
     <script>
-        // Function to display content after a delay
+        // Function to add 'show' class to content after a delay
         function showContent() {
             var content = document.getElementById('content');
-            content.style.display = 'block';
+            content.classList.add('show');
         }
 
         // Call the function after a delay (e.g., 1 second)
         setTimeout(showContent, 1000);
     </script>
-
-    <!-- Content to be displayed after a delay -->
-    <div id="content">
-        <!-- Your content goes here -->
-        <p>This content appears a second after the page is loaded.</p>
-    </div>
 </body>
 </html>
